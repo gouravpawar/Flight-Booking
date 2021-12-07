@@ -11,6 +11,6 @@ public class AirportController {
 	@GetMapping("/hello")
 	
 	public Object hello() {
-		return "Hello World For Airport";
+		return "Hello World For Airportt";
 	}
 }
