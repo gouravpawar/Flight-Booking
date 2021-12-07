@@ -1,0 +1,22 @@
+server.port: 9000
+spring:
+ 
+  cloud:
+    gateway:
+      routes:
+      - id: Airport
+        uri: http://localhost:8081/
+        predicates:
+        - Path=/airport/hello/**
+      - id: Flight
+        uri: http://localhost:8084/
+        predicates:
+        - Path=/flights/hello/**
+      - id: FlightBooking
+        uri: http://localhost:8082/
+        predicates:
+        - Path=/booking/hello/**
+      - id: Passanger
+        uri: http://localhost:8086/
+        predicates:
+        - Path=/passanger/hello/**
